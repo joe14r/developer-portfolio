@@ -7,6 +7,7 @@ import ScrollToTop from "./components/helper/scroll-to-top";
 import Navbar from "./components/navbar";
 import "./css/card.scss";
 import "./css/globals.scss";
+import GoogleTagManagerClient from "./components/GoogleTagManagerClient";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -27,7 +28,7 @@ export default function RootLayout({ children }) {
         </main>
         <Footer />
       </body>
-      <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM} />
+      <GoogleTagManagerClient gtmId={process.env.NEXT_PUBLIC_GTM} />
     </html>
   );
 }
