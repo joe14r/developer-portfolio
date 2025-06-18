@@ -15,10 +15,10 @@ export const skillsData = [
   'Docker',
   'Go',
   'Figma',
-  'Firebase',
-  'MaterialUI',
-  'Nginx',
-  'Strapi'
+  'Angular',
+  'Dart',
+  'Flutter',
+  'Firebase'
 ]
 
 // Choose your skills from below. Make sure it's in the same format and spelled correctly.
