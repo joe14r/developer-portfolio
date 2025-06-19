@@ -7,10 +7,8 @@ import Navbar from "./components/navbar";
 import "./css/card.scss";
 import "./css/globals.scss";
 import dynamic from "next/dynamic";
+import ClientLayoutWrapper from "./components/ClientLayoutWrapper";
 const inter = Inter({ subsets: ["latin"] });
-
-const DynamicScrollToTop = dynamic(() => import("./components/helper/scroll-to-top"), { ssr: false });
-const DynamicGoogleTagManagerClient = dynamic(() => import("./components/GoogleTagManagerClient"), { ssr: false });
 
 export const metadata = {
   title: "Portfolio of Abu Said - Software Developer",
@@ -26,11 +24,10 @@ export default function RootLayout({ children }) {
         <main className="min-h-screen relative mx-auto px-6 sm:px-12 lg:max-w-[70rem] xl:max-w-[76rem] 2xl:max-w-[92rem] text-white">
           <Navbar />
           {children}
-          <DynamicScrollToTop />
+          <ClientLayoutWrapper />
         </main>
         <Footer />
       </body>
-      <DynamicGoogleTagManagerClient gtmId={process.env.NEXT_PUBLIC_GTM} />
     </html>
   );
 }
