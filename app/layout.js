@@ -7,7 +7,6 @@ import Navbar from "./components/navbar";
 import "./css/card.scss";
 import "./css/globals.scss";
 import dynamic from "next/dynamic";
-import ClientLayoutWrapper from "./components/ClientLayoutWrapper";
 import ClientOnlyLayout from "./components/ClientOnlyLayout";
 const inter = Inter({ subsets: ["latin"] });
 
