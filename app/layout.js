@@ -8,6 +8,7 @@ import "./css/card.scss";
 import "./css/globals.scss";
 import dynamic from "next/dynamic";
 import ClientLayoutWrapper from "./components/ClientLayoutWrapper";
+import ClientOnlyLayout from "./components/ClientOnlyLayout";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -24,9 +25,9 @@ export default function RootLayout({ children }) {
         <main className="min-h-screen relative mx-auto px-6 sm:px-12 lg:max-w-[70rem] xl:max-w-[76rem] 2xl:max-w-[92rem] text-white">
           <Navbar />
           {children}
-          <ClientLayoutWrapper />
         </main>
         <Footer />
+        <ClientOnlyLayout gtmId={process.env.NEXT_PUBLIC_GTM} />
       </body>
     </html>
   );
