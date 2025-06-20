@@ -1,12 +1,6 @@
 "use client"
 
 import { useEffect } from 'react';
-import dynamic from "next/dynamic";
-
-const GoogleTagManager = dynamic(
-  () => import("@next/third-parties/google").then(mod => mod.GoogleTagManager),
-  { ssr: false }
-);
 
 const GlowCard = ({ children , identifier}) => {
   useEffect(() => {
