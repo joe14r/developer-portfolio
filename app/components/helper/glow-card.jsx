@@ -4,9 +4,14 @@ import { useEffect } from 'react';
 
 const GlowCard = ({ children , identifier}) => {
   useEffect(() => {
-    if (typeof window === 'undefined') return;
+    // Double check to ensure we're on the client side
+    if (typeof window === 'undefined' || typeof document === 'undefined') return;
+    
     const CONTAINER = document.querySelector(`.glow-container-${identifier}`);
     const CARDS = document.querySelectorAll(`.glow-card-${identifier}`);
+    
+    // Additional safety check
+    if (!CONTAINER || !CARDS.length) return;
 
     const CONFIG = {
       proximity: 40,
