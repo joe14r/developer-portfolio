@@ -3,9 +3,11 @@
 import { experiences } from "@/utils/data/experience";
 import Image from "next/image";
 import { BsPersonWorkspace } from "react-icons/bs";
+import dynamic from "next/dynamic";
 import experience from '../../../assets/lottie/code.json';
-import AnimationLottie from "../../helper/animation-lottie";
-import GlowCard from "../../helper/glow-card";
+
+const AnimationLottie = dynamic(() => import("../../helper/animation-lottie"), { ssr: false });
+const GlowCard = dynamic(() => import("../../helper/glow-card"), { ssr: false });
 
 function Experience() {
   return (
@@ -41,7 +43,7 @@ function Experience() {
               {
                 experiences.map(experience => (
                   <GlowCard key={experience.id} identifier={`experience-${experience.id}`}>
-                    <div className="p-3 relative">
+                    <div className="p-3 relative text-white">
                       <Image
                         src="/blur-23.svg"
                         alt="Hero"
@@ -62,9 +64,7 @@ function Experience() {
                           <p className="text-base sm:text-xl mb-2 font-medium uppercase">
                             {experience.title}
                           </p>
-                          <p className="text-sm sm:text-base">
-                            {experience.company}
-                          </p>
+                          <p className="text-sm sm:text-base">{experience.company}</p>
                         </div>
                       </div>
                     </div>
