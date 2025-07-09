@@ -20,10 +20,7 @@ async function getData() {
 }
 
 export default function Home() {
-  useEffect(() => {
-    getData().then(setBlogs).catch(console.error);
-  }, []);
-
+  // Removed useEffect for blog fetching
   return (
     <div suppressHydrationWarning>
       <HeroSection />
