@@ -13,7 +13,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Portfolio of Youssef Arafat - Software Developer",
   description:
-    "This is the portfolio of Abu Said. I am a full stack developer and a self taught developer. I love to learn new things and I am always open to collaborating with others. I am a quick learner and I am always looking for new challenges.",
+    "This is the portfolio of Youssef Arafat. Quick-learning self-taught developer focused on frontend/Applications development. Open to new challenges and enjoy working with others to bring creative solutions to life.",
 };
 
 export default function RootLayout({ children }) {
