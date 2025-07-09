@@ -2,7 +2,6 @@
 import { useEffect, useState } from "react";
 import { personalData } from "@/utils/data/personal-data";
 import AboutSection from "./components/homepage/about";
-import Blog from "./components/homepage/blog";
 import ContactSection from "./components/homepage/contact";
 import Education from "./components/homepage/education";
 import Experience from "./components/homepage/experience";
@@ -21,8 +20,6 @@ async function getData() {
 }
 
 export default function Home() {
-  const [blogs, setBlogs] = useState([]);
-
   useEffect(() => {
     getData().then(setBlogs).catch(console.error);
   }, []);
@@ -35,7 +32,6 @@ export default function Home() {
       <Skills />
       <Projects />
       <Education />
-      <Blog blogs={blogs} />
       <ContactSection />
     </div>
   );
