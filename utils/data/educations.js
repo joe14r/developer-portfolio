@@ -10,11 +10,5 @@ export const educations = [
     title: "High School",
     duration: "2008 - 2020",
     institution: "Urwa Bin Al Zubair School",
-  },
-  {
-    id: 3,
-    title: "Secondary School Certificate",
-    duration: "2008 - 2018",
-    institution: "Baitus Saif Islamia Madrasah",
   }
 ]
